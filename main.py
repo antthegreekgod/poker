@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from card import Card
+from card import Deck, Card
 
 if __name__ == '__main__':
-    Card().pick_card()
+    card = Card().pick_card()
+    deck = Deck().deck
+
+    print(card, "\n\n", deck)

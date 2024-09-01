@@ -6,13 +6,14 @@ class Deck:
     
     def __init__(self):
         self.suits = ("spades", "clubs", "hearts", "diamonds")
-        self.numbers = [1,2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
-        deck = {}
+        self.numbers = (2,3,4,5,6,7,8,9,10,"J","Q","K","A")
+        self.deck = [0]*52
 
+        i = 0
         for suit in self.suits:
-            deck[suit] = self.numbers
-        
-        self.deck = deck
+            for num in self.numbers:
+                self.deck[i] = (suit,num)
+                i+=1
 
 
 class Card(Deck):
@@ -25,4 +26,4 @@ class Card(Deck):
         
         card = (random_suit, random_num)
 
-        print(card)
+        return card
