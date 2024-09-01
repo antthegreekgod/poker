@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-from card import Deck, Card
+from card import Deck
+from preflop import Shuffle
 
 if __name__ == '__main__':
-    card = Card().pick_card()
-    deck = Deck().deck
+    shuff = Shuffle().cards_preflop()
 
-    print(card, "\n\n", deck)
+    print(shuff)

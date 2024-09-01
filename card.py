@@ -15,15 +15,9 @@ class Deck:
                 self.deck[i] = (suit,num)
                 i+=1
 
+    def pick_card(self):
 
-class Card(Deck):
-
-    @classmethod
-    def pick_card(Card):
-
-        random_suit = Deck().suits[randint(0,3)]
-        random_num = Deck().numbers[randint(0,len(Deck().numbers)-1)]
-        
-        card = (random_suit, random_num)
+        card = self.deck[randint(0,len(self.deck)-1)]
+        self.deck.remove(card)
 
         return card
